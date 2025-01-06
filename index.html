@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: "BebasNeue Bold";
+        src: url(fonts/BB/BebasNeue\ Bold.ttf);
+    }
+    @font-face {
+        font-family: "Gilroy-Regular";
+        src: url(fonts/GY/Gilroy-Regular.ttf);
+    }
+    @font-face {
+        font-family: "Gilroy-Semibold";
+        src: url(fonts/GY/Gilroy-Semibold.ttf);
+    }
+    @font-face {
+        font-family: "Montserrat-Regular";
+        src: url(fonts/MM/Montserrat-Regular.ttf)
+    }
+    @font-face {
+        font-family: "Montserrat-Medium";
+        src: url(fonts/MM/Montserrat-Medium.ttf)
+    }
+    @font-face {
+        font-family: "Montserrat-SemiBold";
+        src: url(fonts/MM/Montserrat-SemiBold.ttf)
+    }
+
+    :root{
+        --BB700:'BebasNeue Bold';
+        --GY400:'Gilroy-Regular';
+        --GY600:'Gilroy-Semibold';
+        --MM400:'Montserrat-Regular';
+        --MM500:'Montserrat-Medium';
+        --MM600:'Montserrat-SemiBold';
+    }
+    /* root end */
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    .container-fluid{
+        padding: 0 30px;
+    }
+    .container{
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    /* body{
+        overflow: hidden;
+    } */
+    /* header start */
+    .header{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .header__nav{
+        padding-top: 30px;
+    }
+    .header__nav-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header__nav-info{
+        display: flex;
+        align-items: center; 
+        gap: 45px;
+    }
+    .header__nav-list{
+        display: flex;
+        align-items: center;
+        gap: 17px;
+    }
+    .header__nav-link{
+        font-family: var(--GY600);
+        line-height: 19px;
+        color: #13171D;
+        position: relative;
+    }
+    .header__nav-link:hover{
+        color: #E2001A;
+        transition: .3s;
+    }
+    .header__nav-link:hover::before{
+        transform: scaleX(1);
+        transition: .3s;
+
+    }
+    .header__nav-link::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #E2001A;
+        left: 0;
+        bottom: -24px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: .3s;
+
+    }
+    .header__nav-contacts{
+        display: flex;
+        align-items: center;
+    }
+    .header__nav-location{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .header__nav-call{
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+    .header__nav-mapLink p {
+        font-family: var(--MM400);
+        line-height: 17px;
+        color: #13171D;
+    }
+    .header__nav-mapLink a {
+        font-family: var(--MM400);
+        font-size: 12px;
+        line-height: 15px;
+        text-decoration: underline solid #015AA9;
+        color: #015AA9;
+    }
+    .header__nav-phoneImg{
+        margin-left: 10px;
+    }
+    .header__nav-phone{
+        font-family: var(--GY600);
+        font-size: 16px;
+        line-height: 23px;
+        color: #13171D;
+    }
+    .header__nav-call span{
+        font-family: var(--GY600);
+        font-size: 20px;
+        opacity: 20%;
+        padding: 0 5px;
+    }
+    .header__content-info{
+        position: relative;
+    }
+    .header__content-info h1{
+        font-family: var(--BB700);
+        font-size: 110px;
+        line-height: 100px;
+        color: #13171D;
+        max-width: 428px;
+        width: 100%;
+    }
+    .header__content{
+        flex-grow:1 ;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header__content-content{
+        display: flex;
+        align-items: center;
+        gap: 100px;
+    }
+    .header__content-info h1::before{
+        content: url(images/header/decoration.png);
+        position: absolute;
+        z-index: -1;
+        top: -12%;
+        left: -16%;
+    }
+    .header__content-info h1::after{
+        content: url(images/header/Arrow.png);
+        position: absolute;
+        z-index: -1;
+        top: -7%;
+        left: 100%;
+    }
+    .header__content-text{
+        font-family: var(--GY400);
+        font-size: 24px;
+        color: #444444;
+        line-height: 34px;
+        max-width: 401px;
+        margin: 20px 0 40px 0 ;
+    }
+    .header__content-btn{
+        padding: 18px 30px;
+        border: none;
+        border-radius:15px ;
+        background: #E2001A;
+        font-family: var(--MM600);
+        line-height: 26px;
+        color: white;
+        cursor: pointer;
+    }
+    .header__content-btn::before{
+        content: url(images/header/decoration2.png);
+        z-index: -1;
+        position: absolute;
+        top: 100%;
+        right: 120%;
+    }
+    .header__content-master{
+        position: relative;
+    }
+    .header__content-master img {
+        max-width: 609px;
+    }
+    .header__content-master .decoration {
+        position: absolute;
+        top: 14%;
+        left: 105%;
+    }
+    .header__content-master .decoration2 {
+        position: absolute;
+        bottom: 4%;
+        right:-18% ;
+    }
+    .header__content-discount{
+        display: flex;
+        align-items: last baseline;
+        gap: 21px;
+        position: absolute;
+        top: -20%;
+        left: auto;
+    }
+    .header__content-discount h2{
+        font-family: var(--BB700);
+        font-size: 113px;
+        line-height: 113px;
+        color: #FF6B00;
+        box-shadow: 0px 2.32px 1.85px 0px #FF6B0007;
+        box-shadow: 0px 5.39px 4.31px 0px #FF6B000A;
+        box-shadow: 0px 9.68px 7.74px 0px #FF6B000D;
+        box-shadow: 0px 16.06px 12.85px 0px #FF6B000F;
+        box-shadow: 0px 26.45px 21.16px 0px #FF6B0012;
+        box-shadow: 0px 46.23px 36.99px 0px #FF6B0015;
+        box-shadow: 0px 100px 80px 0px #FF6B001C;
+    }
+    .header__content-promotion{
+        position: absolute;
+        max-width: 220px;
+        width: 100%;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 0px 3.22px 3.62px 0px #FF6B000A;
+        box-shadow: 0px 8.89px 10.02px 0px #FF6B000E;
+        box-shadow: 0px 21.4px 24.12px 0px #FF6B0012;
+        box-shadow: 0px 71px 80px 0px #FF6B001C;
+        padding: 69px 21px 30px 30px;
+        
+
+        top: 30%;
+        left: 63%;
+    }
+    .header__content-textPromotion{
+        font-family: var(--GY400);
+        font-size: 20px;
+        line-height: 26px;
+        color: #13171D;
+        max-width: 213px;
+        width: 100%;
+        margin-bottom: 22px
+    }
+    .header__content-line{
+        width: 205px;
+        height: 1px;
+        background-color: #13171D;
+        opacity: 10%;
+    }
+    .header__content-promotionText{
+        font-family: var(--GY600);
+        font-size: 20px;
+        line-height: 24px;
+        color: #13171D;
+        opacity: 50%;
+        margin: 22px 0 8px 0;
+    }
+    .header__content-promotionTimer{
+        display: flex;
+        gap: 6px;
+        text-align: center;
+    }
+    .day{
+        font-family: var(--GY600);
+        font-size: 32px;
+        line-height: 38px;
+        color: #13171D;
+    }
+    .hours{
+        font-family: var(--GY600);
+        font-size: 32px;
+        line-height: 38px;
+        color: #13171D;
+    }
+    .minutes{
+        font-family: var(--GY600);
+        font-size: 32px;
+        line-height: 38px;
+        color: #13171D;
+    }
+    .data{
+        font-family: var(--GY600);
+        font-size: 11px;
+        line-height: 13px;
+        color: #13171D;
+        opacity: 50%;
+    }
+    .header__content-promotionTimer span{
+        font-family: var(--GY600);
+        font-size: 24px;
+        line-height: 28px;
+        color: #13171D;
+    }
+    .main__content-masterInfo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 99px;
+        margin-top: 138px;
+    }
+    .main__content-delivery h3{
+        font-family: var(--GY600);
+        font-size: 20px;
+        line-height: 24px;
+        color: #13171D;
+        margin: 24px 0 16px 0;
+    }
+    .main__content-delivery p{
+        font-family: var(--GY400);
+        font-size: 18px;
+        line-height: 24px;
+        color: #444444;
+        max-width: 364px;
+    }
+    .main__content-delivery:last-of-type{
+        margin-left: 107px;
+    }
+    /* header end */
+</style>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav-content container-fluid">
+                <div class="header__nav-info">
+                    <a href="##" class="header__nav-logo">
+                        <img src="images/header/logo.png" alt="">
+                    </a>
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="##" class="header__nav-link">Наши услуги</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="##" class="header__nav-link">О компании</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="##" class="header__nav-link">Отзывы</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="##" class="header__nav-link">Выполненные заказы</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="##" class="header__nav-link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__nav-contacts">
+                    <div class="header__nav-location">
+                        <img src="images/header/map-pin.png" alt="">
+                        <div class="header__nav-mapLink">
+                            <p>г. Кишинев, ул. Бэнулеску Бодони, д.33</p>
+                            <a href="https://www.google.com/maps/place/Strada+Mitropolit+Gavriil+B%C4%83nulescu-Bodoni+33,+MD-2012,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%BE%D0%B2%D0%B0/@47.0232087,28.8270295,17z/data=!3m1!4b1!4m6!3m5!1s0x40c97c32df57537b:0xea7ff6bc12accf0a!8m2!3d47.0232087!4d28.8270295!16s%2Fg%2F11b8v6jzl5?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D" >Мы на карте</a>
+                        </div>
+                    </div>
+                    <div class="header__nav-call">
+                        <a href="tel:+7069827738" class="header__nav-phone">069 82 77 38</a>
+                        <span>/</span>
+                        <a href="tel:+7079927738" class="header__nav-phone">079 92 77 38</a>
+                        <img src="images/header/phone-call.png" alt="" class="header__nav-phoneImg">
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="header__content container">
+            <div class="header__content-content">
+                <div class="header__content-info">
+                    <h1>Проблемы
+                        с Вашим устройством?
+                    </h1>
+                        <p class="header__content-text">
+                            Решаем любые проблемы!
+                            Большой склад и опытные мастера
+                        </p>
+                        <button class="header__content-btn">
+                            Бесплатная консультация
+                        </button>
+                </div>
+                <div class="header__content-master">
+                    <img src="images/header/master.png" alt="">
+                    <img src="images/header/Wave.png" alt="" class="decoration">
+                    <img src="images/header/Dots.png" alt="" class="decoration2">
+                    <div class="header__content-promotion">
+                        <div class="header__content-discount">
+                            <h2 >50%</h2>
+                            <img src="images/header/fire.svg" alt="">
+                        </div>
+                        <p class="header__content-textPromotion">скидка на ремонт телефонов, ноутбуков и планшетов до <strong>-50%</strong></p>
+                        <div class="header__content-line"></div>
+                        <p class="header__content-promotionText">Конец акции:</p>
+                        <div class="header__content-promotionTimer" id="timer">
+                            <div class="timer-day">
+                                <span class="day">00</span>
+                                <p class="data">DAYS</p>
+                            </div>
+                            <span>:</span>
+                            <div class="timer-hours">
+                                <span class="hours">00</span>
+                                <p class="data"> HOURS</p>
+                            </div>
+                            <span>:</span>
+                            <div class="timer-minutes">
+                                <span class="minutes">00</span>
+                                <p class="data">MINUTES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <main class="main__content-content container">
+            <div class="main__content-masterInfo">
+                <div class="main__content-delivery">
+                    <img src="images/header/free.png" alt="">
+                    <h3>Курьер  по городу</h3>
+                    <p>Выезд курьера Буюканы Чеканы, Рышкановка, центр, Ботаника.</p>
+                </div>
+                <div class="main__content-delivery">
+                    <img src="images/header/telephone.png" alt="">
+                    <h3>Подменный телефон -  Беслатно</h3>
+                    <p>Телефон взамен Беслатно, пока ваш в ремонте</p>
+                </div>
+                <div class="main__content-delivery">
+                    <img src="images/header/freetelephone.png" alt="">
+                    <h3>Забота о вас</h3>
+                    <p>Незначительные поломки -
+                        делаем бесплатно.</p>
+                </div>
+            </div>
+        </main>
+    </main>
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
