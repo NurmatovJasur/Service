@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Service</title>
 </head>
 <style>
     @font-face {
@@ -43,7 +44,6 @@
     *{
         margin: 0;
         padding: 0;
-        list-style: none;
         text-decoration: none;
     }
     .container-fluid{
@@ -55,9 +55,6 @@
         margin: 0 auto;
         padding: 0 15px;
     }
-    /* body{
-        overflow: hidden;
-    } */
     /* header start */
     .header{
         height: 100vh;
@@ -81,6 +78,7 @@
     .header__nav-list{
         display: flex;
         align-items: center;
+        list-style: none;
         gap: 17px;
     }
     .header__nav-link{
@@ -206,6 +204,10 @@
         line-height: 26px;
         color: white;
         cursor: pointer;
+        transition: .3s;
+    }
+    .header__content-btn:hover{
+        background: #FC142F;
     }
     .header__content-btn::before{
         content: url(images/header/decoration2.png);
@@ -326,12 +328,15 @@
         line-height: 28px;
         color: #13171D;
     }
+    /* header end */
+    /* main start */
+
     .main__content-masterInfo{
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 99px;
-        margin-top: 138px;
+        margin: 138px 0;
     }
     .main__content-delivery h3{
         font-family: var(--GY600);
@@ -350,7 +355,646 @@
     .main__content-delivery:last-of-type{
         margin-left: 107px;
     }
-    /* header end */
+    .main__content-gadgets{
+        display: flex;
+        flex-direction: column;
+    }
+    .main__content-gadgetsBlock1{
+        display: flex;
+        align-items: center;
+    }
+
+    .main__content-gadgetsTitle{
+        font-family: var(--BB700);
+        font-size: 80px;
+        line-height: 84px;
+        color: #13171D;
+        max-width: 449px;
+        width: 100%;
+        margin-right: 206px;
+    }
+    .btnApple{
+        position: absolute;
+        border: none;
+        background: none;
+        top: 61% ;
+        left: 79%;
+        z-index: 1;
+
+        cursor: pointer;
+    }
+    .btnAndroid{
+        position: absolute;
+        border: none;
+        background: none;
+        top: 61%;
+        right: -26%;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .main__content-gadgetsImages{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    .Apple-images{
+        position: relative;
+        max-width: 302px;
+    }
+    .Android-images{
+        position: relative;
+        max-width: 302px;
+    }
+    .clock-images{
+        position: relative;
+        max-width: 302px;
+    }
+    .btnclock{
+        position: absolute;
+        border: none;
+        background: none;
+        top: 62.5%;
+        right: -26.5%;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .main__content-gadgetsBlock2{
+        display: flex;
+        align-items: center;
+        gap: 27px;
+    }
+    .notebook-images{
+        position: relative;
+        max-width: 302px;
+    }
+    .btnnotebook{
+        position: absolute;
+        border: none;
+        background: none;
+        top: 61%;
+        right: -26.5%;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .pk-images{
+        position: relative;
+        max-width: 302px;
+    }
+    .btnpk{
+        position: absolute;
+        border: none;
+        background: none;
+        top: 61%;
+        right: -26.5%;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .pc-images{
+        position: relative;
+        max-width: 302px;
+    }
+    .btnpc{
+        position: absolute;
+        border: none;
+        background: none;
+        top: 62.5%;
+        right: -26.5%;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .main__content-companyInfo{
+        position: relative;
+        background: linear-gradient(180deg, #EBF3F8 0%, rgba(235, 243, 248, 0) 100%);
+    }
+    .main__content-company-info{
+        display: flex;
+        align-items: center;
+        gap: 110px;
+    }
+    .main__content-companyTitle{
+        font-family: var(--BB700);
+        font-size: 80px;
+        line-height: 80px;
+        color: #13171D;
+        max-width: 333px;
+        position: relative;
+    }
+    .main__content-companyTitle::before{
+        content: url(images/header/Arrow.png);
+        position: absolute;
+        top: 40%;
+        left: 68%;
+    }
+    .main__content-companyText{
+        font-family: var(--GY400);
+        font-size: 24px;
+        line-height: 30px;
+        max-width: 320px;
+        margin: 24px 0 64px 0;
+    }
+    .main__content-companyBtn{
+        padding: 18px 30px;
+        background: #E2001A;
+        border: none;
+        border-radius: 15px;
+        font-family: var(--MM600);
+        line-height: 26px;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .main__content-companyBtn:hover{
+        background: #FC142F;
+        transform: translateY(-10%);
+    }
+    .main__content-Delivery h3{
+        font-family: var(--GY600);
+        font-size: 20px;
+        line-height: 24px;
+        color: #13171D;
+        padding: 16px 0 24px 0;
+    }
+    .main__content-Delivery p{
+        font-family: var(--GY400);
+        font-size: 18px;
+        line-height: 24px;
+        color: #444444;
+    }
+    .main__content-companyPay{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main__companyInfo-text{
+        max-width: 333px;
+        width: 100%;
+    }
+    .main__content-clients{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main__content-clientsTitle{
+        font-family: var(--BB700);
+        font-size: 56px;
+        line-height: 56px;
+        color: #13171D;
+    }
+    .main__content-clientsReviews{
+        margin-top: 120px;
+    }
+    .main__content-clientReviews{
+        display: flex;
+        align-items: center;
+        gap: 31px;
+        margin-top: 48px;
+    }
+    .clientsImg1{position: relative;}
+    .clientsImg1 .clientsbtn{
+        position: absolute;
+        top: 28%;
+        left: 28%;
+        cursor: pointer;
+        max-width: 130px;
+    }
+    .clientsImg2{position: relative;}
+    .clientsImg2 .clientsbtn{
+        position: absolute;
+        top: 28%;
+        left: 28%;
+        cursor: pointer;
+        max-width: 130px;
+    }
+    .clientsImg3{position: relative;}
+    .clientsImg3 .clientsbtn{
+        position: absolute;
+        top: 28%;
+        left: 28%;
+        cursor: pointer;
+        max-width: 130px;
+    }
+    .clientsImg4{position: relative;}
+    .clientsImg4 .clientsbtn{
+        position: absolute;
+        top: 28%;
+        left: 28%;
+        cursor: pointer;
+        max-width: 130px;
+    }
+    .main__content-clientsPoints{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 48px;
+        gap: 14px;
+    }
+    .points{
+        width: 4px;
+        height: 4px;
+        background: #13171D;
+        opacity: 40%;
+        border-radius: 50%;
+    }
+    .main__completed-title{
+        font-family: var(--BB700);
+        font-size: 56px;
+        line-height: 56px;
+        color: #13171D;
+    }
+    .main__completed-questions{
+        display: flex;
+        align-items: center;
+        gap: 125px;
+        margin-bottom: 133px;
+    }
+    .main__completed-questionsLeft h3{
+        font-family: var(--BB700);
+        font-size: 48px;
+        line-height: 48px;
+        color: #13171D;
+        max-width: 427px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    .main__completed-questionsLeft h3::before{
+        content: url(images/main/decoration.png);
+        position: absolute;
+        bottom: 10%;
+        left: -25%;
+        z-index: -1;
+    }
+    .main__completed-questionsLeft .texts{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .main__completed-questionsLeft p{
+        font-family: var(--MM400);
+        font-size: 14px;
+        line-height: 17px;
+        max-width: 288px;
+        width: 100%;
+        margin: 33px 0;
+    }
+    .main__completed-questionsLeft button{
+        font-family: var(--MM600);
+        line-height: 26px;
+        color: white;
+        background: #E2001A;
+        font-size: 15px;
+        border: none;
+        padding: 20px 85px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .main__completed-questionsLeft button:hover{
+        background: #FC142F;
+        transform: translateY(-10%);
+    }
+    .main__completed-questionsRight{
+        display: flex;
+        align-items: center;
+        gap: 41px;
+    }
+    .lists1{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    .lists2{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        position: relative;
+    }
+    .lists1 h2{
+        font-family: var(--BB700);
+        font-size: 48px;
+        line-height: 48px;
+        color: #13171D;
+    }
+    .item{
+        color: #E2001A;
+        font-size: 22px;
+    }
+    .item p{
+        font-family: var(--MM400);
+        font-size: 18px;
+        line-height: 24px;
+        color: #444444;
+    }
+    .lists2 img {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: -10%;
+        right: -40%;
+    }
+    .main__content-guarantee-content{
+        background: linear-gradient(180deg, #EBF3F8 0%, rgba(235, 243, 248, 0) 100%);
+    }
+    .main__content-guaranteeTitle{
+        font-family: var(--BB700);
+        font-size: 80px;
+        line-height: 84px;
+        color: #13171D;
+        max-width: 966px;
+        width: 100%;
+        margin-bottom: 63px;
+        padding-top: 133px;
+    }
+
+    .slideImages{
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+    .slideImages .slide{
+        max-width: 302px ;
+        width: 100%;
+    }
+    .slideImages::-webkit-scrollbar{
+        display: none;
+    }
+    .guaranteeLeft{
+        padding: 18px 21px;
+        color: #E2001A;
+        border-radius: 23px;
+        border: none;
+        background: white;
+        box-shadow: 0px 8px 16px 0px #FF6B0029;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .guaranteeLeft:hover{
+        background: #E2001A;
+        color: white;
+    }
+    .guaranteeRight{
+        padding: 18px 21px;
+        color: #E2001A;
+        border-radius: 23px;
+        border: none;
+        background: white;
+        box-shadow: 0px 8px 16px 0px #FF6B0029;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .guaranteeRight:hover{
+        background: #E2001A;
+        color: white;
+    }
+    .main__content-specialists{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 145px 0 84px 0;
+    }
+    .main__specialists-info{
+        display: flex;
+        align-items: center;
+        gap: 195px;
+        margin-top: 56px;
+    }
+    .main__specialists-title{
+        font-family: var(--MM500);
+        font-size: 24px;
+        line-height: 32px;
+        color: #13171D;
+        text-align: center;
+        max-width: 700px;
+        width: 100%;
+        position: relative;
+    }
+    .main__specialists-title::before{
+        content: url(images/main/decoratuon2.png);
+        position: absolute;
+        top: -25%;
+        left: -1%;
+    }
+    .main__specialists-title::after{
+        content: url(images/main/decoration3.png);
+        position: absolute;
+        bottom: -25%;
+        right: -1%;
+    }
+    .main__specialists-texts{
+        position: relative;
+        max-width: 470px;
+        width: 100%;
+    }
+    .main__specialists-texts p{
+        font-family: var(--MM400);
+        font-size: 18px;
+        line-height: 24px;
+        color: #646464;
+    }
+    .main__specialists-texts .Arrow{
+        position: absolute;
+        top: 40%;
+        left: 100%;
+    }
+    .specialists-decoration{
+        position: absolute;
+        top: -50%;
+        left: -10%;
+    }
+    .main__specialists-img{
+        position: relative;
+    }
+    .main__specialists-img .decoration{
+        position: absolute;
+        bottom: -5%;
+        right: 15%;
+        z-index: -1;
+    }
+    .main__content-forms{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main__content-forms{
+        border: 1px solid #C7D1D7;
+        border-radius: 30px;
+        padding: 48px 111px;
+    }
+    .main__content-formsText{
+        position: relative;
+    }
+    .main__content-formsText h2{
+        font-family: var(--BB700);
+        font-size: 113px;
+        line-height: 113px;
+        color: #FF6B00;
+        position: absolute;
+        top: -90%;
+        background: white;
+        padding: 0 20px;
+    }
+    .main__content-formsText h2::before{
+        content: url(images/header/fire.svg);
+        position: absolute;
+        top: -60%;
+        right: -2%;
+    }
+    .main__content-formsText p {
+        font-family: var(--BB700);
+        font-size: 48px;
+        line-height: 48px;
+        color: #13171D;
+        max-width: 377px;
+        width: 100%;
+        margin-top: 21px;
+    }
+    .main__content-formsText strong {
+        font-family: var(--BB700);
+        font-size: 48px;
+        line-height: 48px;
+        color: #E2001A;
+    }
+    .main__forms-form input {
+        padding: 19px 0 19px 24px;
+        border: 1px solid #DADADA;
+        border-radius: 15px;
+        outline: none;
+    }
+    .main__forms-form button{
+        font-family: var(--MM600);
+        line-height: 26px;
+        color: white;
+        background: #E2001A;
+        font-size: 15px;
+        border: none;
+        padding: 20px 85px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .main__forms-form button:hover{
+        background: #FC142F;
+        transform: translateY(-10%);
+    }
+    .main__forms-form .data{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+    /* main end */
+    /* footer start */  
+    .footer__content-content{
+        margin-top: 116px;
+    }
+    .footer__content-info{
+        padding: 55px 69px 42px 71px;
+        background: white;
+        box-shadow: 0px 8px 10px 0px #FF6B0014;
+        box-shadow: 0px 50px 60px 0px #FF6B0014;
+        border-radius: 30px;
+        transform: translateY(20%)
+    }
+    .footer__content-title{
+        font-family: var(--BB700);
+        font-size: 56px;
+        line-height: 56px;
+        color: #13171D;
+    }
+    .footer__content-images{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 111px;
+        margin-top: 40px;
+    }
+    .footer__content-images img{
+        border-radius: 15px;
+    }
+    .footer__content-images .video{
+        position: relative;
+    }
+    .footer__content-images .play{
+        position: absolute;
+        top: 41%;
+        left: 38%;
+        cursor: pointer;
+        max-width: 130px;
+    }
+    .footer__content-contact{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .tel{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .link{
+        font-family: var(--MM500);
+        font-size: 20px;
+        line-height: 24px;
+        color: #13171D;
+    }
+    .tel span{
+        font-family: var(--MM500);
+        font-size: 20px;
+        line-height: 24px;
+        color: #13171D;
+        opacity: 50%;
+    }
+    .email{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .location{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .footer__content-vote h4{
+        font-family: var(--GY600);
+        font-size: 20px;
+        line-height: 24px;
+        color: #13171D;
+    }
+    .footer__content-vote p{
+        font-family: var(--GY400);
+        font-size: 18px;
+        line-height: 24px;
+        color: #444444;
+    }
+    .stars{
+        display: flex;
+        gap: 10px;
+        margin: 16px 0 9px 0;
+    }
+    .footer__content-rating{
+        display: flex;
+        align-items: center;
+        gap: 188px;
+        margin-top: 34px;
+    }
+    .footer__content-networks{
+        font-family: var(--GY600);
+        font-size: 20px;
+        line-height: 23px;
+        color: #13171D;
+    }
+    .social{
+        display: flex;
+        gap: 15px;
+        margin-top: 22px;
+    }
+    map iframe{
+        width: 100%;
+    }
+    /* footer end */
 </style>
 <body>
     <header class="header">
@@ -443,7 +1087,7 @@
         </div>
     </header>
     <main class="main">
-        <main class="main__content-content container">
+        <div class="main__content-content container">
             <div class="main__content-masterInfo">
                 <div class="main__content-delivery">
                     <img src="images/header/free.png" alt="">
@@ -462,8 +1106,290 @@
                         делаем бесплатно.</p>
                 </div>
             </div>
-        </main>
+            <div class="main__content-gadgets">
+            <div class="main__content-gadgetsBlock1">
+                <h2 class="main__content-gadgetsTitle">
+                    Мы работаем
+                    c устройствами:
+                </h2>
+                <div class="main__content-gadgetsImages">
+                    <div class="Apple-images">
+                        <img src="images/main/Apple.png" alt="" class="Apple">
+                        <button class="btnApple"><img src="images/main/gadgetsBtn.png" alt=""></button>
+                    </div>
+                    <div class="Android-images">
+                        <img src="images/main/Android.png" alt="" class="Android">
+                        <button class="btnAndroid"><img src="images/main/gadgetsBtn.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+            <div class="main__content-gadgetsBlock2">
+                <div class="clock-images">
+                    <img src="images/main/Гаджетами.png" alt="" class="clock">
+                    <button class="btnclock"><img src="images/main/gadgetsBtn.png" alt=""></button>
+                </div>
+                <div class="notebook-images">
+                    <img src="images/main/Ноутбуками.png" alt="" class="notebook">
+                    <button class="btnnotebook"><img src="images/main/gadgetsBtn.png" alt=""></button>
+                </div>
+                <div class="pk-images">
+                    <img src="images/main/Моноблоками и PC.png" alt="" class="pk">
+                    <button class="btnpk"><img src="images/main/gadgetsBtn.png" alt=""></button>
+                </div>
+                <div class="pc-images">
+                    <img src="images/main/Гаджетами.png" alt="" class="pc">
+                    <button class="btnpc"><img src="images/main/gadgetsBtn.png" alt=""></button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="main__content-companyInfo">
+            <div class="main__content-company-info container" style="padding-top:80px ;">
+                <div class="main__companyInfo-text">
+                    <h2 class="main__content-companyTitle">
+                        О компании Arron
+                    </h2>
+                    <p class="main__content-companyText">
+                        Узнайте о нашей компании больше из видео за 1 минуту.
+                    </p>
+                    <button class="main__content-companyBtn">
+                        Смотреть
+                        <i class="fa-solid fa-play" style="color: white;"></i>
+                    </button>
+                </div>
+                <div class="main__content-companyPay">
+                    <div class="main__content-Delivery" style="max-width: 364px;width: 100%;">
+                        <img src="images/header/free.png" alt="">
+                        <h3>
+                            Выезжаем в любую точку Кишинева
+                        </h3>
+                        <p>Выезд курьера Буюканы Чеканы, Рышкановка, центр, Ботаника.</p>
+                    </div>
+                    <div class="main__content-Delivery" style="max-width: 336px;width: 100%; margin-left: 80px;">
+                        <img src="images/main/trusted.png" alt="">
+                        <h3>
+                            Работы от 30 минут
+                        </h3>
+                        <p>Время работы или настройки занимает
+                            от 30 минут до несколько часов.</p>
+                    </div>
+                    <div class="main__content-Delivery" style="max-width: 320px;width: 100%; margin: 40px 0 24px 0;" >
+                        <img src="images/main/payment.png" alt="">
+                        <h3>
+                            Удобный способ оплаты
+                        </h3>
+                        <p>Оплата наличными или по перечеслению компаниям.</p>
+                    </div>
+                    <div class="main__content-Delivery" style="max-width: 344px;width: 100%; margin: 40px 0 0 124px;">
+                        <img src="images/main/secure.png" alt="">
+                        <h3>
+                            Гарантия на все выполненые услуги
+                        </h3>
+                        <p>Запчасти, фотографии и сообщения под Вашим контролем. После работ инженер отдаст Вам старые запчасти.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="main__content-clientsReviews container">
+                <div class="main__content-clients">
+                    <h2 class="main__content-clientsTitle">Отзывы счастливых клиентов:</h2>
+                </div>
+                <div class="main__content-clientReviews">
+                    <div class="clientsImg1">
+                        <img src="images/main/clients1.png" alt="" style="border-radius:15px ;">
+                        <img src="images/main/clientsBtn.png" alt="" class="clientsbtn">
+                    </div>
+                    <div class="clientsImg2">
+                        <img src="images/main/clients2.png" alt="" style="border-radius:15px;">
+                        <img src="images/main/clientsBtn.png" alt="" class="clientsbtn">
+                    </div>
+                    <div class="clientsImg3">
+                        <img src="images/main/clients3.png" alt="" style="border-radius:15px;">
+                        <img src="images/main/clientsBtn.png" alt="" class="clientsbtn">
+                    </div>
+                    <div class="clientsImg4">
+                        <img src="images/main/clients4.png" alt="" style="border-radius:15px;">
+                        <img src="images/main/clientsBtn.png" alt="" class="clientsbtn">
+                    </div>
+
+                </div>
+            </div>
+            <div class="main__content-completed container" style="margin-top: 120px;">
+                <div class="slider" style="display: flex;align-items: center;justify-content: space-between;">
+                    <div class="main-completed-titles" style="display: flex;align-items: center;gap: 78px;">
+                        <h2 class="main__completed-title">Выполненные заказы:</h2>
+                    </div>
+                </div>
+                <div class="main__completed-images" style="display: flex;gap: 31px;margin: 48px 0 145px 0;">
+                    <img src="images/main/phone1.png" alt="">
+                    <img src="images/main/phone2.png" alt="">
+                    <img src="images/main/phone3.png" alt="">
+                </div>
+                <div class="main__completed-questions">
+                    <div class="main__completed-questionsLeft">
+                        <h3>
+                            Что делать если ноутбук или телефон медлено работает
+                        </h3>
+                        <div class="texts">
+                            <img src="images/main/chcklsticon.png" alt="">
+                            <p>Получите чек лист - Что делать, если ноутбук или телефон грузится</p>
+                        </div>
+                        <button>Получить чек лист </button>
+                    </div>
+                    <div class="main__completed-questionsRight">
+                        <ul class="lists1">
+                            <h2>наши услуги</h2>
+                            <li class="item"><p>ремонт ноутбуков</p></li>
+                            <li class="item"><p>ремонт смартфонов</p></li>
+                            <li class="item" style="max-width: 270px;"><p>заправка и ремонт картриджей</p></li>
+                            <li class="item"><p>установка СНПЧ</p></li>
+                            <li class="item"><p>ремонт компьютеров</p></li>
+                            <li class="item"><p>ремонт моноблоков</p></li>
+                        </ul>
+                        <ul class="lists2">
+                            <img src="images/header/Dots.png" alt="" style="top: -35%; right: 0%;">
+                            <li class="item"><p>ремонт планшетов</p></li>
+                            <li class="item"><p>ремонт КПК</p></li>
+                            <li class="item"><p>ремонт мониторов</p></li>
+                            <li class="item"><p>ремонт роутеров</p></li>
+                            <li class="item"><p>восстановление жестких дисков</p></li>
+                            <li class="item" style="max-width: 234px;"><p>компьютерная помощь и IT аутсорсинги др.</p></li>
+                            <img src="images/header/decoration2.png" alt="">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main__content-guarantee-content">
+                <div class="main__content-guarantee container">
+                    <h2 class="main__content-guaranteeTitle">На каждый ремонт гарантировано подарок на ваш выбор :</h2>
+                    <div class="main__content-clientBtns" style="display: flex;align-items: center;justify-content: flex-end; gap: 10px;">
+                        <button class="guaranteeLeft"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="guaranteeRight"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="slideImages">
+                    <img src="images/main/Чехлы.png" alt="" class="slide">
+                    <img src="images/main/Стёкла.png" alt="" class="slide">
+                    <img src="images/main/Кабели.png" alt="" class="slide">
+                    <img src="images/main/Держатели.png" alt="" class="slide">
+                    <img src="images/main/зарядки.png" alt="" class="slide">
+                    <img src="images/main/наушники.png" alt="" class="slide">
+                    <img src="images/main/другие устройства.png" alt="" class="slide">
+                </div>
+                <div class="main__content-clientsPoints" style="margin-top: 0px;">
+                    <div class="points"></div>
+                    <div class="points"></div>
+                    <div class="points"></div>
+                    <div class="points"></div>
+                    <div class="points"></div>
+                </div>
+                <div class="main__content-specialists">
+                    <h2 class="main__specialists-title">
+                        В нашей компании работают лучшие специалисты, которые прекрасно разбираются в современных технологиях и имеют более 3-х лет опыта работы.
+                    </h2>
+                    <div class="main__specialists-info">
+                        <div class="main__specialists-texts">
+                            <img class="specialists-decoration" src="images/main/Wave.png" alt="">
+                            <p>
+                                За счет этого мы гарантируем устранение любых неполадок и предоставляем гарантию на все выполненные работы.
+                            </p>
+                            <img class="Arrow" src="images/header/Arrow.png" alt="">
+                            <p style="margin: 24px 0;">
+                                Мы поможем не только восстановить работоспособность техники, но и подскажем, как избежать возникновения подобных поломок в будущем.
+                            </p>
+                            <p>
+                                Квалифицированная консультация специалиста поможет безопасно пользоваться компьютером. В нашем штате работают опытные специалисты.
+                            </p>
+                        </div>
+                        <div class="main__specialists-img">
+                            <img src="images/main/specoalists.png" alt="">
+                            <img class="decoration" src="images/header/decoration2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="main__content-forms">
+                    <div class="main__content-formsText">
+                        <h2>50%</h2>
+                        <p>Записаться на диагностику 
+                            в <strong>удобное</strong> вам время</p>
+                    </div>
+                    <form class="main__forms-form">
+                        <div class="data">
+                            <input type="date" required style="max-width: 240px;width: 100%;">
+                            <input type="time" required style="max-width: 260px;width: 100%;">
+                        </div>
+                        <input type="tel" placeholder="Телефон" required style="max-width: 427px;width: 100%;margin: 20px 0;">
+                        <button>Записаться</button>
+                    </form>
+                </div>
+                </div>
+            </div>
     </main>
+    <footer class="footer">
+        <div class="footer__content-content container">
+            <div class="footer__content-contacts">
+                <h3 class="footer__content-title">
+                    наши контакты
+                </h3>
+                <div class="footer__content-images">
+                    <img src="images/footer/img1.png" alt="">
+                    <div class="video">
+                        <img src="images/footer/img2.png" alt="">
+                        <img class="play" src="images/main/clientsBtn.png" alt="">
+                    </div>
+                </div>
+                <div class="footer__content-info">
+                    <div class="footer__content-contact">
+                        <div class="tel">
+                            <img src="images/footer/tel.png" alt="">
+                            <a class="link" href="tel:+7069827738">069 82 77 38</a>
+                            <span>/</span>
+                            <a class="link" href="tel:+7079927738"> 079 92 77 38</a>
+                        </div>
+                        <div class="email">
+                            <img src="images/footer/email.png" alt="">
+                            <a class="link" href="">info@arron.md</a>
+                        </div>
+                        <div class="location">
+                            <img src="images/footer/location.png" alt="">
+                            <a class="link" href="https://www.google.com/maps/place/Strada+Mitropolit+Gavriil+B%C4%83nulescu-Bodoni+33,+MD-2012,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%BE%D0%B2%D0%B0/@47.0232087,28.8270295,17z/data=!3m1!4b1!4m6!3m5!1s0x40c97c32df57537b:0xea7ff6bc12accf0a!8m2!3d47.0232087!4d28.8270295!16s%2Fg%2F11b8v6jzl5?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D">г. Кишинев, ул. Бэнулеску Бодони, д.33</a>
+                        </div>
+                    </div>
+                    <div class="footer__content-rating">
+                        <div class="footer__content-vote">
+                            <h4>Рейтинг сервиса</h4>
+                            <div class="stars">
+                                <img src="images/footer/StarFull.png" alt="">
+                                <img src="images/footer/StarFull.png" alt="">
+                                <img src="images/footer/StarFull.png" alt="">
+                                <img src="images/footer/StarFull.png" alt="">
+                                <img src="images/footer/StarFull.png" alt="">
+                                <img src="images/footer/StarHalf.png" alt="">
+                            </div>
+                            <p>4.8/5.0 - 403 голоса</p>
+                        </div>
+                        <div class="footer__content-networks">
+                            <p>Мы в соцсетях</p>
+                            <div class="social">
+                                <a href="">
+                                    <img src="images/footer/instagram.png" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/footer/facebook.png" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/footer/tiktok.png" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="images/footer/youtube.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <map name=""><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.867820806463!2d28.822165787350535!3d47.023199496734684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c32df57537b%3A0x14177c06f1987af!2z0LMsIFN0cmFkYSBNaXRyb3BvbGl0IEdhdnJpaWwgQsSDbnVsZXNjdS1Cb2RvbmkgMzMsIE1ELTIwMTIsIENoaciZaW7Eg3UsINCc0L7Qu9C00L7QstCw!5e0!3m2!1sru!2s!4v1736442396298!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></map>
+    </footer>
 
 
 

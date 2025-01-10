@@ -20,3 +20,32 @@ function timer () {
     setInterval(() => timer(),1000)
 }
 timer()
+
+
+
+let leftBtn = document.querySelector('.guaranteeLeft')
+let rightBtn = document.querySelector('.guaranteeRight')
+let horizontalscroll = document.querySelector('.slideImages')
+
+leftBtn.addEventListener('click',function(){
+    horizontalscroll.scrollLeft -= 302;
+});
+rightBtn.addEventListener('click',function(){
+    horizontalscroll.scrollLeft += 302;
+});
+
+
+let btn = document.querySelectorAll('.clientsbtn')
+btn.forEach(btns => {
+    btns.addEventListener('click',function(){
+        btns.style.display = 'none'
+    })
+});(btn)
+
+
+let play = document.querySelector('.play')
+
+play.addEventListener('click',function(){
+    play.style.display = 'none'
+})
+
